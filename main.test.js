@@ -27,6 +27,7 @@ describe("Calculator", () => {
     test("Has a function called addition that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.addition(5) instanceof Calculator).toEqual(true);
+      expect(subject.addition(5) === subject).toEqual(true);
     });
   });
 
@@ -44,6 +45,7 @@ describe("Calculator", () => {
     test("Has a function called subtraction that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.subtraction(5) instanceof Calculator).toEqual(true);
+      expect(subject.subtraction(5) === subject).toEqual(true);
     });
   });
 
@@ -61,6 +63,7 @@ describe("Calculator", () => {
     test("Has a function called multiplication that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.multiplication(5) instanceof Calculator).toEqual(true);
+      expect(subject.multiplication(5) === subject).toEqual(true);
     });
   });
 
@@ -78,6 +81,7 @@ describe("Calculator", () => {
     test("Has a function called Division that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.division(5) instanceof Calculator).toEqual(true);
+      expect(subject.division(5) === subject).toEqual(true);
     });
   });
 
@@ -95,6 +99,7 @@ describe("Calculator", () => {
     test("Has a function called Clear that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.clear() instanceof Calculator).toEqual(true);
+      expect(subject.clear() === subject).toEqual(true);
     });
   });
 });
