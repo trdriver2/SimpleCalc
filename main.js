@@ -33,7 +33,4 @@ class Calculator {
   }
 }
 
-let test = new Calculator(5);
-let a = new Array();
-
 module.exports = Calculator;

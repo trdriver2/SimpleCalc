@@ -24,7 +24,7 @@ describe("Calculator", () => {
       expect(subject.addition(5)).toEqual({ register: 10 });
     });
 
-    test("Has a function called addition that returns an instance of the caller so that its chainable", () => {
+    test("Has a function called addition that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.addition(5) instanceof Calculator).toEqual(true);
     });
@@ -41,7 +41,7 @@ describe("Calculator", () => {
       expect(subject.subtraction(3)).toEqual({ register: 2 });
     });
 
-    test("Has a function called subtraction that returns an instance of the caller so that its chainable", () => {
+    test("Has a function called subtraction that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.subtraction(5) instanceof Calculator).toEqual(true);
     });
@@ -58,7 +58,7 @@ describe("Calculator", () => {
       expect(subject.multiplication(2)).toEqual({ register: 10 });
     });
 
-    test("Has a function called multiplication that returns an instance of the caller so that its chainable", () => {
+    test("Has a function called multiplication that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.multiplication(5) instanceof Calculator).toEqual(true);
     });
@@ -75,7 +75,7 @@ describe("Calculator", () => {
       expect(subject.division(2)).toEqual({ register: 4 });
     });
 
-    test("Has a function called Division that returns an instance of the caller so that its chainable", () => {
+    test("Has a function called Division that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.division(5) instanceof Calculator).toEqual(true);
     });
@@ -92,7 +92,7 @@ describe("Calculator", () => {
       expect(subject.clear()).toEqual({ register: 0 });
     });
 
-    test("Has a function called Clear that returns an instance of the caller so that its chainable", () => {
+    test("Has a function called Clear that returns the instance of the caller so that its chainable", () => {
       const subject = new Calculator(5);
       expect(subject.clear() instanceof Calculator).toEqual(true);
     });
