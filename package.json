@@ -1,0 +1,14 @@
+{
+  "name": "simplecalc",
+  "version": "1.0.0",
+  "description": "A simple Calculator that can add, multiply, divide, and substract..",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
