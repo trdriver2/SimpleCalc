@@ -125,6 +125,10 @@ describe("Calculator", () => {
       const subject = new Calculator(0);
       expect(subject.rpn("8 2 /")).toEqual(4);
     });
+    test("Multiple Expressions at once", () => {
+      const subject = new Calculator(0);
+      expect(subject.rpn("8 2 / 3 + 1 - 2 *")).toEqual(12);
+    });
     test("error", () => {
       const subject = new Calculator(0);
       expect(subject.rpn("4 + 2")).toEqual(null);
