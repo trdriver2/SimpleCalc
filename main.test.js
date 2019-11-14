@@ -129,9 +129,27 @@ describe("Calculator", () => {
       const subject = new Calculator(0);
       expect(subject.rpn("8 2 / 3 + 1 - 2 *")).toEqual(12);
     });
-    test("error", () => {
-      const subject = new Calculator(0);
-      expect(subject.rpn("4 + 2")).toEqual(null);
+    describe("errors", () => {
+      test("Checks for improper string format", () => {
+        const subject = new Calculator(0);
+        expect(subject.rpn("4 + 2")).toEqual(null);
+      });
+      test("Checks for strings shorter than 5", () => {
+        const subject = new Calculator(0);
+        let test = "";
+        for (let i = 0; i < 5; i++) {
+          expect(subject.rpn(test)).toEqual(null);
+          test += "a";
+        }
+      });
+      test("Checks for non strings", () => {
+        const subject = new Calculator(0);
+        expect(subject.rpn({})).toEqual(null);
+      });
+      test("Checks for nothing being passed in", () => {
+        const subject = new Calculator(0);
+        expect(subject.rpn()).toEqual(null);
+      });
     });
   });
 });

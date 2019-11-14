@@ -31,13 +31,28 @@ class Calculator {
     this.register = 0;
     return this;
   }
-  rpn(evaluate) {
+  rpn(evaluate = "") {
+    const evaluateExpression = exp => {
+      switch (exp) {
+        case "+":
+          return this.addition;
+        case "-":
+          return this.subtraction;
+        case "/":
+          return this.division;
+        case "*":
+          return this.multiplication;
+      }
+    };
+    if (typeof evaluate !== "string" || evaluate.length < 5) {
+      console.error("The provided string cannot be evaluated");
+      return null;
+    }
     evaluate = evaluate.split(" ");
     const expressions = ["+", "-", "*", "/"];
     for (let i = 0; i < evaluate.length; i++) {
       if (isNaN(evaluate[i]) && expressions.includes(evaluate[i])) {
-        let exp = this.evaluateExpression(evaluate[i]).bind(this);
-
+        let exp = evaluateExpression(evaluate[i]).bind(this);
         if (i === 2 && !isNaN(evaluate[i - 1]) && !isNaN(evaluate[i - 2])) {
           this.register = parseInt(evaluate[i - 2]);
           exp(parseInt(evaluate[i - 1]));
@@ -50,12 +65,6 @@ class Calculator {
       }
     }
     return this.register;
-  }
-  evaluateExpression(exp) {
-    if (exp === "+") return this.addition;
-    else if (exp === "-") return this.subtraction;
-    else if (exp === "*") return this.multiplication;
-    else if (exp === "/") return this.division;
   }
 }
 
