@@ -102,4 +102,32 @@ describe("Calculator", () => {
       expect(subject.clear() === subject).toEqual(true);
     });
   });
+
+  describe("Clear", () => {
+    test("Has a function called rpn", () => {
+      const subject = new Calculator(5);
+      expect(subject.rpn).toBeDefined();
+    });
+
+    test("addition", () => {
+      const subject = new Calculator(0);
+      expect(subject.rpn("1 2 +")).toEqual(3);
+    });
+    test("subtraction", () => {
+      const subject = new Calculator(0);
+      expect(subject.rpn("1 2 -")).toEqual(-1);
+    });
+    test("multiplication", () => {
+      const subject = new Calculator(0);
+      expect(subject.rpn("3 2 *")).toEqual(6);
+    });
+    test("divison", () => {
+      const subject = new Calculator(0);
+      expect(subject.rpn("8 2 /")).toEqual(4);
+    });
+    test("error", () => {
+      const subject = new Calculator(0);
+      expect(subject.rpn("4 + 2")).toEqual(null);
+    });
+  });
 });

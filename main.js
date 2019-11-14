@@ -41,7 +41,7 @@ class Calculator {
         if (i === 2 && !isNaN(evaluate[i - 1]) && !isNaN(evaluate[i - 2])) {
           this.register = parseInt(evaluate[i - 2]);
           exp(parseInt(evaluate[i - 1]));
-        } else if (i - 1 >= 0 && !isNaN(evaluate[i - 1])) {
+        } else if (i - 1 > 2 && !isNaN(evaluate[i - 1])) {
           exp(parseInt(evaluate[i - 1]));
         } else {
           console.error("The provided string cannot be evaluated");
