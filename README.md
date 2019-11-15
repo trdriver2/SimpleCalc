@@ -6,3 +6,4 @@ This is just a simple calculator class written in JS. It can add, subtract, mult
 
 To run the application locally, simply clone the repository and, inside of the project dirctory, run npm install. After this, you can import the library using
 "const Calculator = require("./main")"
+to use the api, run "node api.js", and send your equation to localhost:8080/calculate
