@@ -68,7 +68,4 @@ class Calculator {
   }
 }
 
-let a = new Calculator(0);
-console.log(a.rpn("1 2 + 7 - 2 *"));
-
 module.exports = Calculator;
